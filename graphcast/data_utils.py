@@ -332,6 +332,7 @@ def extract_inputs_targets_forcings(
   # "Forcings" include derived variables that do not exist in the original ERA5
   # or HRES datasets, as well as other variables (e.g. tisr) that need to be
   # computed manually for the target lead times. Compute the requested ones.
+  print(input_duration, target_lead_times)
   if set(forcing_variables) & _DERIVED_VARS:
     add_derived_vars(dataset)
   if set(forcing_variables) & {TISR}:
